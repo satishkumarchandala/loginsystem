@@ -9,9 +9,13 @@ const app = express();
 
 // Middleware
 app.use(cors({
-  origin: process.env.FRONTEND_URL || 'https://loginsystem-black.vercel.app',
+  origin: [
+    'https://loginsystem-black.vercel.app',
+    'https://loginsystem-ee9s2be9z-satishs-projects-dcf647d3.vercel.app'
+  ],
   credentials: true
 }));
+
 app.use(express.json());
 
 // Health check route
